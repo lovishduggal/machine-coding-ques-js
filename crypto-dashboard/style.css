@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Roboto;
+}
+
+.heading {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.card-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.card {
+    width: 400px;
+    height: 100px;
+    background-color: 'white';
+    border-radius: 10px;
+    box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.2);
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: 0.3fr 1fr;
+    padding: 20px;
+    cursor: pointer;
+}
+
+.image {
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+}
+
+.img {
+    width: 70px;
+    height: 70px;
+}
+
+.details {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+}
+
+.name,
+.price {
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.symbol,
+.percent {
+    font-size: 20px;
+}
+
+.percent {
+    color: red;
+}
