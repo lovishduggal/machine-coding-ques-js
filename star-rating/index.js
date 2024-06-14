@@ -15,12 +15,6 @@ for (let index = 0; index < starList.length; index++) {
         }
     });
 
-    starList[index].addEventListener('dblclick', (e) => {
-        flag = !flag;
-        const idx = e.target.dataset.index;
-        starList[idx].style.color = 'black';
-    });
-
     starList[index].addEventListener('mouseover', (e) => {
         const idx = e.target.dataset.index;
         for (let index = 0; index < starList.length; index++) {

@@ -1,0 +1,79 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+}
+
+.container > * {
+    margin: 0.5rem;
+}
+
+button {
+    background-color: rgba(51, 51, 51, 0.05);
+    border-radius: 8px;
+    border-width: 0;
+    color: #333333;
+    cursor: pointer;
+    display: inline-block;
+    font-family: 'Haas Grot Text R Web', 'Helvetica Neue', Helvetica, Arial,
+        sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 20px;
+    list-style: none;
+    margin: 0;
+    padding: 10px 12px;
+    text-align: center;
+    transition: all 200ms;
+    vertical-align: baseline;
+    white-space: nowrap;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+}
+
+.modal {
+    position: absolute;
+    width: 400px;
+    top: 15vh;
+    border: 1px solid black;
+    display: none;
+    background-color: aliceblue;
+}
+
+.modal-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid black;
+}
+
+h2,
+.content,
+.cross {
+    padding: 0.5rem;
+    margin: 0.5rem;
+}
+
+.cross {
+    cursor: pointer;
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    transition: background-color 300ms ease-in-out;
+}
+.cross:hover {
+    background-color: gainsboro;
+}
