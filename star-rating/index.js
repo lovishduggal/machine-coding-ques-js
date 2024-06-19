@@ -1,37 +1,39 @@
+const starsCont = document.querySelector('.stars-container');
 const starList = document.querySelectorAll('.star');
+let filled = 0;
 let flag = true;
 
-for (let index = 0; index < starList.length; index++) {
-    starList[index].addEventListener('click', (e) => {
-        flag = !flag;
-        const idx = e.target.dataset.index;
+starsCont.addEventListener('click', (e) => {
+    const currentIndex = e.target.dataset.index;
+    console.log(currentIndex, filled);
+    for (let i = 0; i < filled; i++) {
+        starList[i].style.color = 'black';
+    }
+    for (let i = 0; i < currentIndex; i++) {
+        starList[i].style.color = 'yellow';
+    }
+    filled = currentIndex;
+});
 
-        for (let index = 0; index < starList.length; index++) {
-            starList[index].style.color = 'black';
-        }
+starsCont.addEventListener('mouseover', (e) => {
+    const currentIndex = e.target.dataset.index;
+    console.log(currentIndex);
+    for (let i = 0; i < starList.length; i++) {
+        starList[i].style.color = 'black';
+    }
+    for (let i = 0; i < currentIndex; i++) {
+        starList[i].style.color = 'yellow';
+    }
+});
 
-        for (let index = 0; index < idx; index++) {
-            starList[index].style.color = 'yellow';
-        }
-    });
+starsCont.addEventListener('mouseleave', (e) => {
+    const currentIndex = e.target.dataset.index;
 
-    starList[index].addEventListener('mouseover', (e) => {
-        const idx = e.target.dataset.index;
-        for (let index = 0; index < starList.length; index++) {
-            starList[index].style.color = 'black';
-        }
+    for (let i = 0; i < starList.length; i++) {
+        starList[i].style.color = 'black';
+    }
 
-        for (let index = 0; index < idx; index++) {
-            starList[index].style.color = 'yellow';
-        }
-    });
-
-    starList[index].addEventListener('mouseout', (e) => {
-        const idx = e.target.dataset.index;
-        if (flag && idx < 2) {
-            for (let index = 0; index < starList.length; index++) {
-                starList[index].style.color = 'black';
-            }
-        }
-    });
-}
+    for (let i = 0; i < filled; i++) {
+        starList[i].style.color = 'yellow';
+    }
+});
