@@ -13,10 +13,7 @@ function deselectFromStart() {
     return setTimeout(() => {
         for (let j = 0; j < inputs.length; j++) {
             setTimeout(() => {
-                boxes[inputs[j]].addEventListener('click', (e) => {
-                    e.target.style.backgroundColor = '#fff';
-                });
-                boxes[inputs[j]].click();
+                boxes[inputs[j]].style.backgroundColor = '#fff';
             }, 1000 * j);
         }
     }, 2000);
